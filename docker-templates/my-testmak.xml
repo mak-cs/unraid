@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>testmak</Name>
+  <Repository>jlesage/jdownloader-2</Repository>
+  <Registry>https://registry.hub.docker.com/r/jlesage/jdownloader-2</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/58552-support-jdownloader-2/</Support>
+  <Project>http://jdownloader.org</Project>
+  <Overview>JDownloader 2 is a free, open-source download management tool with a huge community of developers that makes downloading as easy and fast as it should be. Users can start, stop or pause downloads, set bandwith limitations, auto-extract archives and much more. It's an easy-to-extend framework that can save hours of your valuable time every day!&#xD;
+&#xD;
+The GUI of the application is accessed through a modern web browser (no installation or configuration needed on the client side) or via any VNC client.&#xD;
+&#xD;
+Also, being based on Alpine Linux, size of this container is very small.&#xD;
+&#xD;
+&#xD;
+&#xD;
+&#xD;
+For a complete documentation of this container, see https://github.com/jlesage/docker-jdownloader-2#readme</Overview>
+  <Category>Downloaders:</Category>
+  <WebUI>http://[IP]:[PORT:5800]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/jdownloader-2.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/jdownloader-2-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1702851445</DateInstalled>
+  <DonateText>If you like my work please consider donating.</DonateText>
+  <DonateLink>https://paypal.me/JocelynLeSage/0usd</DonateLink>
+  <Requires/>
+  <Config Name="Config Directory" Target="/config" Default="/mnt/user/appdata/JDownloader2" Mode="rw" Description="This is where the application stores its configuration, states, log and any files needing persistency." Type="Path" Display="advanced-hide" Required="True" Mask="False">/mnt/user/appdata/JDownloader2</Config>
+  <Config Name="Output Directory" Target="/output" Default="" Mode="rw" Description="This is the default output folder for downloaded files." Type="Path" Display="advanced-hide" Required="null" Mask="null">/mnt/user/underground/1_Download/</Config>
+  <Config Name="User ID" Target="USER_ID" Default="99" Mode="" Description="ID of the user the application runs as." Type="Variable" Display="advanced-hide" Required="True" Mask="False">99</Config>
+  <Config Name="Group ID" Target="GROUP_ID" Default="100" Mode="" Description="ID of the group the application runs as." Type="Variable" Display="advanced-hide" Required="True" Mask="False">100</Config>
+  <Config Name="Umask" Target="UMASK" Default="0000" Mode="" Description="Mask that controls how file permissions are set for newly created files.  The value of the mask is in octal notation." Type="Variable" Display="advanced" Required="False" Mask="False">0000</Config>
+  <Config Name="Niceness (priority)" Target="APP_NICENESS" Default="0" Mode="" Description="Priority at which the application should run.  A niceness value of -20 is the highest priority and 19 is the lowest priority. NOTE: Setting a negative value requires additional permissions.  Thus, " Type="Variable" Display="advanced" Required="False" Mask="False">0</Config>
+  <Config Name="Display Width" Target="DISPLAY_WIDTH" Default="1920" Mode="" Description="Width (in pixels) of the application's window." Type="Variable" Display="advanced" Required="False" Mask="False">1920</Config>
+  <Config Name="Display Height" Target="DISPLAY_HEIGHT" Default="1080" Mode="" Description="Height (in pixels) of the application's window." Type="Variable" Display="advanced" Required="False" Mask="False">1080</Config>
+  <Config Name="Dark Mode" Target="DARK_MODE" Default="0" Mode="" Description="When set to " Type="Variable" Display="advanced" Required="False" Mask="False">0</Config>
+  <Config Name="Secure Connection" Target="SECURE_CONNECTION" Default="0" Mode="" Description="Whether or not an encrypted connection should be used to access the application's GUI.  Set to " Type="Variable" Display="advanced" Required="False" Mask="False">0</Config>
+  <Config Name="Secure Connection VNC Method" Target="SECURE_CONNECTION_VNC_METHOD" Default="SSL" Mode="" Description="Method used to perform the secure VNC connection.  Possible values are " Type="Variable" Display="advanced" Required="False" Mask="False">SSL</Config>
+  <Config Name="Secure Connection Certificate Check Interval" Target="SECURE_CONNECTION_CERTS_CHECK_INTERVAL" Default="60" Mode="" Description="Interval, in seconds, at which the system verifies if web or VNC certificates have changed.  When a change is detected, the affected services are automatically restarted.  A value of " Type="Variable" Display="advanced" Required="False" Mask="False">60</Config>
+  <Config Name="Web Listening Port (Non-Bridge Network Type)" Target="WEB_LISTENING_PORT" Default="5800" Mode="" Description="Port used by the web server to serve the UI of the application.  This port is used internally by the container and it is usually not required to be changed.  NOTE: This setting is relevant only when the Network Type is set to something else than Bridge." Type="Variable" Display="advanced" Required="False" Mask="False">5800</Config>
+  <Config Name="VNC Listening Port (Non-Bridge Network Type)" Target="VNC_LISTENING_PORT" Default="5900" Mode="" Description="Port used by the VNC server to serve the UI of the application.  This port is used internally by the container and it is usually not required to be changed.  NOTE: This setting is relevant only when the Network Type is set to something else than Bridge." Type="Variable" Display="advanced" Required="False" Mask="False">5900</Config>
+  <Config Name="MyJDownloader Email" Target="MYJDOWNLOADER_EMAIL" Default="" Mode="" Description="Email address of the MyJDownloader account to use.  Note that this can also be configured via the JDownloader GUI." Type="Variable" Display="advanced" Required="False" Mask="False"/>
+  <Config Name="MyJDownloader Password" Target="MYJDOWNLOADER_PASSWORD" Default="" Mode="" Description="Password of the MyJDownloader account to use.  Note that this can also be configured via the JDownloader GUI." Type="Variable" Display="advanced" Required="False" Mask="False"/>
+  <Config Name="MyJDownloader Device Name" Target="MYJDOWNLOADER_DEVICE_NAME" Default="" Mode="" Description="The name of this JDownloader instance.  Note that this can also be configured via the JDownloader GUI." Type="Variable" Display="advanced" Required="False" Mask="False"/>
+  <Config Name="Headless Mode" Target="JDOWNLOADER_HEADLESS" Default="0" Mode="" Description="When set to " Type="Variable" Display="advanced" Required="False" Mask="False">0</Config>
+  <Config Name="WEB Port for GUI (Bridge Network Type)" Target="5800" Default="7807" Mode="tcp" Description="Port to access the application's GUI via the web interface.  NOTE: This setting is relevant only when the Network Type is set to " Type="Port" Display="advanced-hide" Required="True" Mask="False">7807</Config>
+  <Config Name="VNC Port for GUI (Bridge Network Type)" Target="5900" Default="7907" Mode="tcp" Description="Port to access the application's GUI via VNC protocol.  Optional if no VNC client is used.  NOTE: This setting is relevant only when the Network Type is set to " Type="Port" Display="advanced-hide" Required="False" Mask="False">7907</Config>
+</Container>
