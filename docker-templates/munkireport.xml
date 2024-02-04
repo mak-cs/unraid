@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>MunkiReport</Name>
+  <Repository>ghcr.io/munkireport/munkireport-php:latest</Repository>
+  <Registry>https://github.com/munkireport/munkireport-php/wiki</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/152362-support-mak-cs-munkireport/</Support>
+  <Project>https://github.com/munkireport/munkireport-php?tab=readme-ov-file#munkireport</Project>
+  <Overview>MunkiReport is a reporting client for macOS. While originally dependent on Munki, MunkiReport is able to run stand-alone or to be coupled with Munki, Jamf or other macOS management solutions.&#xD;
+&#xD;
+Features:&#xD;
+- Quick overview of your macOS fleet with a customizable dashboards&#xD;
+- Get reports on many features (hardware types, disk usage, etc)&#xD;
+- Extendable with a growing list of modules&#xD;
+- Lightweight: only sends reports when facts have changed&#xD;
+- Responsive webdesign&#xD;
+&#xD;
+IMPORTANT: This unRAID docker template uses the SQLite database! If you prefer MariaDB as your database, please check the instructions from the application developer.</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/mak-cs/unraid/master/icons/munkireport.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1707044207</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Path Database" Target="/var/munkireport/app/db" Default="/mnt/user/appdata/MunkiReport/db" Mode="rw" Description="Storage location of the database." Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Path Users" Target="/var/munkireport/local/users" Default="/mnt/user/appdata/MunkiReport/users" Mode="rw" Description="Storage location of the user account files." Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Path php_custom.ini" Target="/usr/local/etc/php/conf.d/php_custom.ini" Default="/mnt/user/appdata/MunkiReport/config/php_custom.ini" Mode="ro" Description="Storage location of the php_custom.ini file.&#13;&#10;The following values should be added/adjusted:&#13;&#10;post_max_size=25M&#13;&#10;upload_max_filesize=25M" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Port WebUI" Target="80" Default="8181" Mode="tcp" Description="IP Port to serve the WebUI of the application." Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Variable AUTH_METHODS" Target="AUTH_METHODS" Default="NOAUTH" Mode="" Description="Can be one of the following values: NOAUTH, LOCAL, AD, SAML, LDAP, NETWORK" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Variable SITENAME" Target="SITENAME" Default="" Mode="" Description="Will appear in the title bar of your browser and as heading on each webpage." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Variable WEBHOST" Target="WEBHOST" Default="" Mode="" Description="The hostname of the webserver, by default automatically determined but if that does not work you can set it. No trailing slash." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Variable MODULES" Target="MODULES" Default="disk_report,munkireport,displays_info,network" Mode="" Description="By default munkireport will only install 3 basic reporting modules: munkireport, managed installs and disk_report. If you want the client to report on more items, here are the availlable MODULES:&#13;&#10;applications, ard, bluetooth, certificate, directory_service, disk_report, displays_info, extensions, filevault_status, fonts, homebrew, homebrew_info, ibridge, installhistory, inventory, localadmin, managedinstalls, mdm_status, munkiinfo, munkireport, munkireportinfo, network, power, printer, profile, security, softwareupdate, sophos, supported_os, timemachine, usage_stats, usb, user_sessions, warranty, wifi" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="022" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">022</Config>
+</Container>
