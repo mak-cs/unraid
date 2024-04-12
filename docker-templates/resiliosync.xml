@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ResilioSync</Name>
+  <Repository>resilio/sync</Repository>
+  <Registry>https://hub.docker.com/r/resilio/sync/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/161391-support-mak-cs-docker-containers/</Support>
+  <Project>https://www.resilio.com/individuals/</Project>
+  <Overview>Sync uses peer-to-peer technology to provide fast, private file sharing for teams and individuals. By skipping the cloud, transfers can be significantly faster because files take the shortest path between devices. Sync does not store your information on servers in the cloud, avoiding cloud privacy concerns.</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8888]/gui</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/linuxserver/templates/master/unraid/resilio-sync.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/mak-cs/unraid/master/icons/resiliosync.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1712958005</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Path Sync" Target="/mnt/sync" Default="/mnt/user/appdata/ResilioSync/sync" Mode="rw" Description="Where resilio-sync should store its config file." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ResilioSync/sync</Config>
+  <Config Name="Port WebUI" Target="8888" Default="8888" Mode="tcp" Description="WebUI" Type="Port" Display="always" Required="true" Mask="false">8888</Config>
+  <Config Name="Port Sync" Target="55555" Default="55555" Mode="tcp" Description="Sync Port." Type="Port" Display="always" Required="true" Mask="false">55555</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="022" Mode="{3}" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">022</Config>
+</Container>
