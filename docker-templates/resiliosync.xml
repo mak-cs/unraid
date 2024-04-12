@@ -18,8 +18,8 @@
   <PostArgs/>
   <CPUset/>
   <DateInstalled>1712958005</DateInstalled>
-  <DonateText/>
-  <DonateLink/>
+  <DonateText>If you like my work, please consider making a donation.</DonateText>
+  <DonateLink>https://paypal.me/makcs</DonateLink>
   <Requires/>
   <Config Name="Path Sync" Target="/mnt/sync" Default="/mnt/user/appdata/ResilioSync/sync" Mode="rw" Description="Where resilio-sync should store its config file." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ResilioSync/sync</Config>
   <Config Name="Port WebUI" Target="8888" Default="8888" Mode="tcp" Description="WebUI" Type="Port" Display="always" Required="true" Mask="false">8888</Config>

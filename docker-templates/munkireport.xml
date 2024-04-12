@@ -27,8 +27,8 @@ IMPORTANT: This unRAID docker template uses the SQLite database! If you prefer M
   <PostArgs/>
   <CPUset/>
   <DateInstalled>1707044207</DateInstalled>
-  <DonateText/>
-  <DonateLink/>
+  <DonateText>If you like my work, please consider making a donation.</DonateText>
+  <DonateLink>https://paypal.me/makcs</DonateLink>
   <Requires/>
   <Config Name="Path Database" Target="/var/munkireport/app/db" Default="/mnt/user/appdata/MunkiReport/db" Mode="rw" Description="Storage location of the database." Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Path Users" Target="/var/munkireport/local/users" Default="/mnt/user/appdata/MunkiReport/users" Mode="rw" Description="Storage location of the user account files." Type="Path" Display="always" Required="false" Mask="false"/>

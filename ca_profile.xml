@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Maintainer>
+  <Icon>https://raw.githubusercontent.com/mak-cs/unraid/master/icons/avatar.png</Icon>
+  <Profile>
+    I create templates of Docker containers to solve my unRAID requirements. If you find them useful, feel free to use them.</Profile>
+  <DonateLink>https://paypal.me/makcs</DonateLink>
+  <DonateText>If you like my work, please consider making a donation.</DonateText>
+</Maintainer>
