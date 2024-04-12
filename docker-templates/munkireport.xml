@@ -23,7 +23,7 @@ IMPORTANT: This unRAID docker template uses the SQLite database! If you prefer M
   <WebUI>http://[IP]:[PORT:80]</WebUI>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/mak-cs/unraid/master/icons/munkireport.png</Icon>
-  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <ExtraParams/>
   <PostArgs/>
   <CPUset/>
   <DateInstalled>1707044207</DateInstalled>

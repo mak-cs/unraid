@@ -14,7 +14,7 @@
   <WebUI>http://[IP]:[PORT:8888]/gui</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/linuxserver/templates/master/unraid/resilio-sync.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/mak-cs/unraid/master/icons/resiliosync.png</Icon>
-  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <ExtraParams/>
   <PostArgs/>
   <CPUset/>
   <DateInstalled>1712958005</DateInstalled>
