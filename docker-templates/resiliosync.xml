@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>ResilioSync</Name>
-  <Repository>resilio/sync</Repository>
+  <Repository>resilio/sync:latest</Repository>
   <Registry>https://hub.docker.com/r/resilio/sync/</Registry>
   <Network>bridge</Network>
   <MyIP/>
