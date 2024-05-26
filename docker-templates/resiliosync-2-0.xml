@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>resiliosync-2-1</Name>
+  <Name>resiliosync-2-0</Name>
   <Repository>resilio/sync</Repository>
   <Registry>https://hub.docker.com/r/resilio/sync/</Registry>
   <Network>br0</Network>
