@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>resiliosync-2-1</Name>
+  <Repository>resilio/sync</Repository>
+  <Registry>https://hub.docker.com/r/resilio/sync/</Registry>
+  <Network>br0</Network>
+  <MyIP>10.10.80.22</MyIP>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/161391-support-mak-cs-docker-containers/</Support>
+  <Project>https://www.resilio.com/individuals/</Project>
+  <Overview>Spezial-Version von MAK-CS f&#xFC;r den internen Einsatz. Original Beschreibung: Sync uses peer-to-peer technology to provide fast, private file sharing for teams and individuals. By skipping the cloud, transfers can be significantly faster because files take the shortest path between devices. Sync does not store your information on servers in the cloud, avoiding cloud privacy concerns.</Overview>
+  <Category>Backup: Cloud: Tools: Status:Beta</Category>
+  <WebUI>http://[IP]:[PORT:8888]/gui</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/linuxserver/templates/master/unraid/resilio-sync.xml</TemplateURL>
+  <Icon>https://www.gravatar.com/avatar/81e838d2966486496d9141265dfd9c8b?s=120&amp;amp;r=g&amp;amp;d=404</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1716740598</DateInstalled>
+  <DonateText>Donations</DonateText>
+  <DonateLink>https://www.linuxserver.io/donate</DonateLink>
+  <Requires/>
+  <Config Name="Path Sync" Target="/mnt/sync" Default="/mnt/user/appdata/resiliosync-2-1/sync" Mode="rw" Description="Where resilio-sync should store its config file." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/resiliosync-2-1/sync</Config>
+  <Config Name="Path Folders" Target="/mnt/sync/folders" Default="/mnt/user/appdata/resiliosync-2-1/folders" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/ResilioSync/</Config>
+  <Config Name="Port WebUI" Target="8888" Default="8888" Mode="tcp" Description="WebUI" Type="Port" Display="always" Required="true" Mask="false">8888</Config>
+  <Config Name="Port Sync" Target="55555" Default="55555" Mode="tcp" Description="Sync Port" Type="Port" Display="always" Required="true" Mask="false">55555</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="022" Mode="{3}" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">022</Config>
+</Container>
